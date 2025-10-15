@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>はじめてのHTML</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+  <header>こんにちは</header>
+   <main>
+    <aside>サイドバー</aside>
+    <section>メインコンテンツ</section>
+  </main>
+  <footer>フッター</footer>
+  
+  <h1>私の自己紹介</h1>
+  <h2>趣味</h2>
+  <p>ゲームとプログラミングが好きです。</p>
+  <h2>好きな食べ物</h2>
+  <ul>
+    <li>カレー</li>
+    <li>ラーメン</li>
+    <li>寿司</li>
+  </ul>
+  <h2>出身地</h2>
+  <p>宮城県仙台市です。</p>
+  <h1>はじめてのJavaScript</h1>
+  <button onclick="sayHello()">クリックしてね！</button>
+   <h1 id="title">こんにちは！</h1>
+  <button id="changeBtn">文字を変える</button>
+  <h3 id="colorChangeTitle">クリックで色が変わる見出し</h3>
+  <button id="colorBtn">色を変える</button>
+  <p id="message">おはようございます！</p>
+  <button onclick="toggleText()">表示／非表示</button>
+  <p id="message1">こんにちは！</p>
+  <button onclick="changeText()">文字を変える</button>
+
+  <script>
+    function sayHello() {
+      alert("こんにちは！JavaScriptが動きました🎉");
+    }
+    const button = document.getElementById("changeBtn");
+    const title = document.getElementById("title");
+    const colorButton= document.getElementById("colorBtn");
+    const colorTitle = document.getElementById("colorChangeTitle");
+
+
+    button.addEventListener("click", () => {
+      title.textContent = "JavaScriptで変わったよ！";
+    });
+    colorbutton.addEventListener("click", () => {
+      colorTitle.style.color = "tomato"; // 文字色を変える
+      colorTitle.style.backgroundColor = "#ffe4e1"; // 背景色も変える
+    });
+        function toggleText() {
+      const text = document.getElementById("message");
+
+      // 表示状態を切り替える
+      if (text.style.display === "none") {
+        text.style.display = "block"; // 表示する
+      } else {
+        text.style.display = "none";  // 非表示にする
+      }
+    }
+        function changeText() {
+      const text = document.getElementById("message1");
+      text.innerHTML = "こんばんは！"; 
+    }
+  </script>
+</body>
+</html>

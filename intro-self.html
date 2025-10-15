@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>自己紹介カード</title>
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .card {
+      background-color: white;
+      width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #666;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1 id="name">千葉 涼平</h1>
+    <p id="text">こんにちは！Web開発を勉強しています。</p>
+    <button onclick="showIntro()">自己紹介</button>
+    <button onclick="showHobby()">趣味</button>
+    <button onclick="showGoal()">目標</button>
+  </div>
+
+  <script>
+    function showIntro() {
+      document.getElementById("text").innerHTML = "こんにちは！Web開発を勉強している大学生です。";
+    }
+
+    function showHobby() {
+      document.getElementById("text").innerHTML = "折り紙とプログラミングです";
+    }
+
+    function showGoal() {
+      document.getElementById("text").innerHTML = "将来は人の役に立つサービスを作りたいです！";
+    }
+  </script>
+</body>
+</html>
